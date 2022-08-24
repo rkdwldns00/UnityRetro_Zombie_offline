@@ -17,6 +17,10 @@ public class PlayerHealth : LivingEntity {
 
     private void Awake() {
         // 사용할 컴포넌트를 가져오기
+        playerAnimator = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerShooter = GetComponent<PlayerShooter>();  
+        playerAudioPlayer = GetComponent<AudioSource>();
     }
 
     protected override void OnEnable() {
